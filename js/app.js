@@ -1,8 +1,10 @@
 $(function () {
  
-    var drag = indexDrag();
+    $('.choice').first().hover(function () {
+        $('#inovation').css('left', '7%');
+    });
     
-    $('#chooser').on('dragstart', drag.start).on('dragend', drag.end);
-    $('section').on('dragenter', drag.enter).on('dragleave', drag.leave);
-    $('section > header').on('dragenter', drag.enter).on('dragleave', drag.leave);
+    $('.choice').eq(1).hover(function () {
+        $('#inovation').css('left', '56%');
+    });
 });

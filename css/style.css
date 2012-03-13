@@ -25,14 +25,24 @@ body
     position: relative;
     box-sizing: border-box;
     width: 50%;
-    height: 100%;     
-    
+    height: 100%;        
+
     cursor: pointer;
     text-align: center;
 
     background-color: transparent;
     
     -webkit-transition: all 300ms ease-in-out;
+}
+
+.choice:first-child:hover
+{
+    background-color: #b6e026;    
+}
+
+.choice:nth-child(2):hover
+{
+    background-color: #cf0404;
 }
 
 .choice header
@@ -66,16 +76,6 @@ body
     -webkit-transition: all 300ms ease-out;
     
     -webkit-transform: translateY(20px);
-}
-
-.choice:first-child:hover
-{
-    background-color: #b6e026;    
-}
-
-.choice:nth-child(2):hover
-{
-    background-color: #cf0404;
 }
 
 .choice:hover header h2

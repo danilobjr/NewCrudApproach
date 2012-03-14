@@ -55,8 +55,9 @@ nav .item_menu
     position: relative;
     width: 100%;
     height: 100%;
-    
-    -webkit-transition: -webkit-transform 300ms ease-in-out;
+    z-index: 2;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: -webkit-transform 600ms;
 }
 
 nav .face
@@ -65,15 +66,35 @@ nav .face
     width: 100%;
     height: 100%;
     
-    border: 1px solid black;
-    border-radius: 3px;
+    text-shadow: 0 1px 2px #666;
+    
+    border: 1px solid #999;
+    border-radius: 3px;    
+    box-shadow: inset 0 0 12px gray;
+    
+    z-index: 2;
     
     -webkit-backface-visibility: hidden;    
 }
-
+/*
+nav .face::after
+{
+    content: " ";
+    position: absolute;
+    width: 80%;
+    height: 80%;    
+    top: 20%;
+    left: 10%;
+    
+    border-radius: 300px / 100px;
+    box-shadow: 0 0 20px black;
+    
+    z-index: 1;
+}
+*/
 nav .front
 {
-    
+    color: #444;
 }
 
 nav .front span
@@ -87,7 +108,8 @@ nav .front span
 
 nav .back
 {
-    -webkit-transform: rotateX(180deg);
+    color: #666;
+    -webkit-transform: rotateY(180deg);
 }
 
 nav .back a
@@ -97,8 +119,13 @@ nav .back a
     box-sizing: border-box;
     height: 50%;
     
+    cursor: pointer;
     text-align: center;
     font-size: 26px;    
+    
+    background-color: rgba(255, 255, 255, 0);
+    
+    -webkit-transition: -webkit-transform 200ms;
 }
 
 nav .back a span
@@ -112,5 +139,23 @@ nav .back a span
 
 nav > div:hover .item_menu
 {
-    -webkit-transform: rotateX(180deg);
+    -webkit-transform: rotateY(180deg);
+}
+
+nav a:hover
+{
+    color: black;
+}
+
+.users
+{
+    background-color: #8fc800;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzhmYzgwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM4ZmM4MDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  #8fc800 0%, #8fc800 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8fc800), color-stop(100%,#8fc800));
+    background: -webkit-linear-gradient(top,  #8fc800 0%,#8fc800 100%);
+    background: -o-linear-gradient(top,  #8fc800 0%,#8fc800 100%);
+    background: -ms-linear-gradient(top,  #8fc800 0%,#8fc800 100%);
+    background: linear-gradient(top,  #8fc800 0%,#8fc800 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8fc800', endColorstr='#8fc800',GradientType=0 );
 }

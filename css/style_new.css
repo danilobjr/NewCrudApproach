@@ -1,0 +1,116 @@
+html 
+{
+    height: 100%;
+}
+
+body 
+{
+    height: 100%;
+    
+    font-family: Arial;
+}
+
+/* CONTAINER */
+
+#container
+{
+    width: 950px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+
+header
+{
+    height: 100px;
+}
+
+header h1
+{
+    position: absolute;
+    margin-top: 22px;
+    
+    font-size: 48px;
+}
+
+/* MAIN NAV */
+
+nav
+{
+    
+}
+
+nav > div
+{
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin-right: 70px;
+    
+    -webkit-perspective: 1000;
+}
+
+nav .item_menu
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+    -webkit-transition: -webkit-transform 300ms ease-in-out;
+}
+
+nav .face
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+    border: 1px solid black;
+    border-radius: 3px;
+    
+    -webkit-backface-visibility: hidden;    
+}
+
+nav .front
+{
+    
+}
+
+nav .front span
+{
+    display: block;
+    margin-top: 76px;
+    
+    font-size: 32px;
+    text-align: center;
+}
+
+nav .back
+{
+    -webkit-transform: rotateX(180deg);
+}
+
+nav .back a
+{
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    height: 50%;
+    
+    text-align: center;
+    font-size: 26px;    
+}
+
+nav .back a span
+{
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    margin-top: -13px;
+}
+
+nav > div:hover .item_menu
+{
+    -webkit-transform: rotateX(180deg);
+}

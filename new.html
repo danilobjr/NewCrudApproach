@@ -7,6 +7,11 @@
         
         <link rel="stylesheet" type="text/css" href="css/reset.css" />
         <link rel="stylesheet" type="text/css" href="css/style_new.css" />
+        <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js"></script>
+        <script src="js/app.js"></script>
         
         <!--[if gte IE 9]>
             <style type="text/css">
@@ -20,14 +25,25 @@
     <body>
         <div id="container">
             <header>
-                <h1>Welcome to NEW CRUD</h1>
+                <h1>CSS3 App</h1>
             </header>
         
-            <nav>
+            <br clear="all" />
+            
+            <!--<nav>
                 <div>
                     <div id="user_menu" class="item_menu">
                         <div class="face front users"><span>Users</span></div>
                         <div class="face back users">
+                            <a href="#new_user"><span>New</span></a>
+                            <a><span>List</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="item_menu">
+                        <div class="face front groups"><span>Groups</span></div>
+                        <div class="face back groups">
                             <a><span>New</span></a>
                             <a><span>List</span></a>
                         </div>
@@ -35,21 +51,61 @@
                 </div>
                 <div>
                     <div class="item_menu">
-                        <div class="face front"><span>Groups</span></div>
-                        <div class="face back">
-                            <a href="#"><span>New</span></a>
-                            <a><span>List</span></a>
+                        <div class="face front about"><span>About</span></div>
+                        <div class="face back about"></div>
+                    </div>
+                </div>
+            </nav>-->
+        
+            <section id="content">
+                <section id="main_nav" class="center">
+                    <nav>
+                        <div>
+                            <div id="user_menu" class="item_menu">
+                                <div class="face front users"><span>Users</span></div>
+                                <div class="face back users">
+                                    <a href="#new_user"><span>New</span></a>
+                                    <a><span>List</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="item_menu">
+                                <div class="face front groups"><span>Groups</span></div>
+                                <div class="face back groups">
+                                    <a><span>New</span></a>
+                                    <a><span>List</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="item_menu">
+                                <div class="face front about"><span>About</span></div>
+                                <div class="face back about"></div>
+                            </div>
+                        </div>
+                    </nav>
+                </section>    
+            
+                <section id="new_user" class="down">
+                    <header>
+                        <h2>New User</h2>
+                    </header>
+            
+                    <div>
+                        <div class="field">
+                            <label>Name</label>
+                            <br />
+                            <input type="text" />
                         </div>
                     </div>
-                </div>
-                <div>
-                    <div class="item_menu">
-                        <div class="face front"><span>About</span></div>
-                        <div class="face back"></div>
+                
+                    <div>
+                        <a href="#main_nav">Voltar</a>
                     </div>
-                </div>
-            </nav>
-        
+                </section>
+            </section>
+            
             <br clear="all" />
             
             <footer>

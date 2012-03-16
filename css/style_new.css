@@ -221,7 +221,7 @@ nav a:hover
     border: 1px solid;
     background-color: #EEE;
     
-    -webkit-transition: all 400ms;
+    -webkit-transition: all 600ms;
 }
 
 #content > section.center
@@ -233,14 +233,14 @@ nav a:hover
 
 #content > section.up
 {
-    top: -500px;
+    /*top: -500px;*/
     opacity: 0;    
-    -webkit-transform: rotateX(-70deg);
+    -webkit-transform: translate3d(0, -100%, 0) rotateX(-90deg) translate3d(0, -100%, 0);
 }
 
 #content > section.down
 {
-    top: 500px;
+    /*top: 500px;*/
     opacity: 0;    
-    -webkit-transform: rotateX(70deg);
+    -webkit-transform: translate3d(0, 100%, 0) rotateX(90deg) translate3d(0, 100%, 0);
 }

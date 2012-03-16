@@ -2,7 +2,9 @@ $(function () {
  
     var currentReverse;
     var lastReverse;
-    
+    //var urlBase = '/NewCrudApproach';
+    var urlBase = '';
+
     $('a[href^=#]').click(function (e) {
         e.preventDefault();
         var linkClicado = $(e.currentTarget);
@@ -20,7 +22,7 @@ $(function () {
 
     $('.choice').click(function (e) {
         if ($(e.currentTarget).attr('id').indexOf('com') > -1) {
-            window.location = '/new.html';
+            window.location = urlBase + '/new.html';
         }
         else {
             alert('Not yet. =]');

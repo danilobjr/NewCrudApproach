@@ -34,6 +34,11 @@ body
 
 a, a:visited { color: inherit; text-decoration: none; }
 
+::-webkit-validation-bubble { opacity: 0.9; -webkit-animation: validation 200ms ease 1; }
+::-webkit-validation-bubble-message { background-color: white; border: 0; border-radius: 1px; box-shadow: 0 0 8px black; }
+::-webkit-validation-bubble-arrow { border: 0; }
+::-webkit-validation-bubble-arrow-clipper {}
+
 /* CONTAINER */
 
 #container
@@ -86,7 +91,7 @@ nav
     box-sizing: border-box;
     width: 950px;
     height: 100%;
-    padding: 104px;
+    padding: 64px;
 }
 
 nav > div
@@ -264,6 +269,7 @@ nav a:hover
     box-sizing: border-box;
     width: 950px;
     height: 100%;
+    padding: 40px;
     
     border: 1px solid black;
     background-color: #eee;
@@ -296,6 +302,18 @@ nav a:hover
 
 /* FORMS */
 
+section > header
+{
+    height: 80px;
+}
+
+section > header > h2
+{
+    font-size: 32px;
+    color: white;
+    text-shadow: 0 0 10px black;
+}
+
 .field
 {
     float: left;
@@ -311,8 +329,9 @@ nav a:hover
 .field input
 {
     margin: 6px 0 0 0;
-    padding: 5px;
+    padding: 7px;
     font-size: 18px;
+    border: 0;
 }
 
 .buttons

@@ -1,23 +1,16 @@
 $(function () {
  
-    var currentReverse;
-    var lastReverse;
     var urlBase = '/NewCrudApproach';
     //var urlBase = '';
 
     $('a[href^=#]').click(function (e) {
         e.preventDefault();
-        var linkClicado = $(e.currentTarget);
+        var link = $(e.currentTarget);
 
-        var sectionOut = linkClicado.closest('section');
+        var sectionOut = link.closest('section').removeClass('center');
         
-        lastReverse = sectionOut.attr('class');
-        sectionOut.removeAttr('class').addClass((currentReverse) ? currentReverse : 'up');
-
-        var idSectionIn = linkClicado.attr('href');
-        var sectionIn = $(idSectionIn);
-        currentReverse = sectionIn.attr('class');
-        sectionIn.removeAttr('class').addClass((lastReverse) ? lastReverse : 'center');
+        var idSectionIn = link.attr('href');
+        var sectionIn = $(idSectionIn).addClass('center');
     });
 
     $('.choice').click(function (e) {

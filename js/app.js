@@ -2,8 +2,8 @@ $(function () {
  
     var currentReverse;
     var lastReverse;
-    //var urlBase = '/NewCrudApproach';
-    var urlBase = '';
+    var urlBase = '/NewCrudApproach';
+    //var urlBase = '';
 
     $('a[href^=#]').click(function (e) {
         e.preventDefault();

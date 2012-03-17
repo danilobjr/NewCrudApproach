@@ -8,3 +8,9 @@
 {
     
 }
+
+@-ms-keyframes validation
+{
+    0% { opacity: 0; -ms-transform: translateY(20px); }
+    100% { opacity: 0.9; -ms-transform: translateY(0); }
+}

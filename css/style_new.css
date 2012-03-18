@@ -294,7 +294,7 @@ nav a:hover
     box-sizing: border-box;
     width: 950px;
     height: 100%;
-    padding: 40px;
+    /*padding: 40px;*/
     
     border: 1px solid black;
     background-color: #eee;
@@ -416,4 +416,97 @@ section > header > h2
     top: 1px;
     color: #222;
     background-color: #F2F2F2;
+}
+
+/* USERS LIST */
+
+.user
+{
+    position: relative;
+    float: left;
+    box-sizing: border-box;
+    width: 300px;
+    height: 165px;
+    margin: 0 25px 25px 0;
+    padding: 8px;
+    box-shadow: 0 0 15px black;
+    border-radius: 2px;
+    
+    -webkit-transition: all 400ms;
+    -moz-transition: all 400ms;
+    -ms-transition: all 400ms;
+}
+
+.user:nth-child(3n+3)
+{
+    margin-right: 0;
+}
+
+.user figure
+{
+    float: left;
+    margin: 0 10px 0 0;
+    text-align: center;
+}
+
+.user figure img
+{
+    width: 90px;
+}
+
+.user figure figcaption
+{
+    margin-top: 5px;
+}
+
+.user hgroup
+{
+    float: left;
+}
+
+.user hgroup h1
+{
+    font-size: 22px;
+}
+
+.user hgroup h2
+{
+    font-size: 14px;
+}
+
+.user span
+{
+    float: left;
+}
+
+.user .profile
+{
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0 8px 8px 0;
+    color: #444;
+    /*
+    -webkit-transition: all 400ms;
+    -moz-transition: all 400ms;
+    -ms-transition: all 400ms;
+    */
+}
+
+.user .profile a
+{
+    
+}
+
+.user:hover
+{
+    cursor: pointer;
+    color: #444;
+    background-color: #eee;
+}
+
+.user:hover .profile
+{
+    opacity: 1;
 }

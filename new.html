@@ -12,7 +12,12 @@
         
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js"></script>
-        <script src="js/app.js"></script>
+        <script src="https://raw.github.com/BorisMoore/jsrender/master/jsrender.js"></script>
+        
+        <script src="js/namespace.js"></script>
+        <script src="js/crud.viewmodel.js"></script>
+        <script src="js/crud.template.js"></script>
+        <script src="js/crud.app.js"></script>
         
         <!--[if gte IE 9]>
             <style type="text/css">
@@ -95,10 +100,10 @@
                         <h2>Users</h2>
                     </header>
             
-                    <div>
-                        <div class="user">
+                    <div class="content">
+                        <!--<div class="user">
                             <figure>
-                                <img src="images/male_1.jpg" alt="Albert Camp" />
+                                <img src="images/male_6.jpg" alt="Albert Camp" />
                                 <figcaption>A. Camp</figcaption>
                             </figure>
                             
@@ -112,43 +117,7 @@
                             <div class="profile">
                                 <a href="#">View Profile</a>
                             </div>
-                        </div>
-                        
-                        <div class="user">
-                            <figure>
-                                <img src="images/female_1.jpg" alt="Linda Palmer" />
-                                <figcaption>L. Palmer</figcaption>
-                            </figure>
-                            
-                            <hgroup>
-                                <h1>Secretary</h1>
-                                <h2>Operation Directory</h2>
-                            </hgroup>
-                            
-                            <span>lindapalmer@corp.com</span>
-                            
-                            <div class="profile">
-                                <a href="#">View Profile</a>
-                            </div>
-                        </div>
-                        
-                        <div class="user">
-                            <figure>
-                                <img src="images/male_2.jpg" alt="William Corbut" />
-                                <figcaption>W. Corbut</figcaption>
-                            </figure>
-                            
-                            <hgroup>
-                                <h1>Director</h1>
-                                <h2>Operation Directory</h2>
-                            </hgroup>
-                            
-                            <span>williamcorbut@corp.com</span>
-                            
-                            <div class="profile">
-                                <a href="#">View Profile</a>
-                            </div>
-                        </div>
+                        </div>-->
                     </div>
                 
                     <div class="buttons">
@@ -164,4 +133,24 @@
             </footer>
         </div>
     </body>
+    
+    <script id="usersTemplate" type="text/x-jsrender">
+        <div class="user">
+            <figure>
+                <img src="images/{{:image}}" alt="{{:name}}" />
+                <figcaption>{{:shortName}}</figcaption>
+            </figure>
+            
+            <hgroup>
+                <h1>{{:role}}</h1>
+                <h2>{{:departament}}</h2>
+            </hgroup>
+            
+            <span>{{:email}}</span>
+            
+            <div class="profile">
+                <a href="#">View Profile</a>
+            </div>
+        </div>
+    </script>
 </html>

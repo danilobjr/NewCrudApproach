@@ -369,6 +369,9 @@ section > header > h2
 
 .buttons
 {
+    position: absolute;
+    right: 0;
+    bottom: 0;    
 }
 
 .buttons a, .buttons button

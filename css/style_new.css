@@ -54,15 +54,15 @@ a, a:visited { color: inherit; text-decoration: none; }
 
 header
 {
-    height: 100px;
+    height: 60px;
 }
 
 header h1
 {
     position: absolute;
-    margin-top: 22px;
+    margin-top: 10px;
     
-    font-size: 48px;
+    font-size: 44px;
 }
 
 /* FOOTER */
@@ -72,7 +72,7 @@ footer
     position: absolute;
     box-sizing: border-box;
     width: 100%;
-    height: 80px;
+    height: 40px;
     bottom: 0;
     
     text-align: center;
@@ -268,7 +268,7 @@ nav a:hover
     position: relative;
     box-sizing: border-box;
     width: 100%;
-    height: 69%;
+    height: 80%;
     min-height: 460px;
     
     -webkit-perspective: 900;
@@ -337,7 +337,7 @@ nav a:hover
 
 section > header
 {
-    height: 80px;
+    height: 55px;
 }
 
 section > header > h2

@@ -2,10 +2,10 @@ crud.app = function () {
 
     var data = crud.data;
     var navigator = crud.navigator;
-    var views = crud.views;
+    var usersView = crud.views.users;
 
     var listUsers = function (e) {
-        views.users.render(data.users);
+        usersView.render(data.users);
     };
     
     var navigate = function (e) {
@@ -17,12 +17,24 @@ crud.app = function () {
         navigator.goToView(from, to);
     };
 
+    var goToPreviousSlide = function (e) {
+        var from = $('.slide').filter('.active');
+        navigator.goToSlide(from, 'left');
+    };
+
+    var goToNextSlide = function (e) {
+        var from = $('.slide').filter('.active');
+        navigator.goToSlide(from, 'right');
+    };
+
     var enter = function (e) {
     };
 
     return {
         listUsers: listUsers,
-        navigate: navigate
+        navigate: navigate,
+        goToPreviousSlide: goToPreviousSlide,
+        goToNextSlide: goToNextSlide
     };
 }();
 
@@ -33,4 +45,6 @@ $(function () {
     $('a[href^=#]').click(app.navigate);
     $('.choice').click(app.enter);
     $('[href=#users]').click(app.listUsers);
+    $('#side_nav .prev').click(app.goToPreviousSlide);
+    $('#side_nav .next').click(app.goToNextSlide);
 });

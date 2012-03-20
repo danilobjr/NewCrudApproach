@@ -2,7 +2,8 @@ crud.template = function () {
     
     var render = function (destinationSelector, templateId, data) {
         var result = $('#' + templateId).render(data);
-        $(destinationSelector).html(result);
+        var destinationContainer = $(destinationSelector).html('');
+        destinationContainer.html(result);
     };
     
     return {

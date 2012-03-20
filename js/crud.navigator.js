@@ -16,8 +16,23 @@ crud.navigator = function () {
         from.removeClass('center');
         to.addClass('center');
     };
+
+    var goToSlide = function (from, direction) {
+        var leftSlide = from.prev();
+        var rightSlide = from.next();
+
+        if (direction === 'right' && !from.is(':last-child')) {
+            from.removeClass('active').addClass('prev');
+            rightSlide.removeClass('right').addClass('active');
+        }
+        else if (direction === 'left' && !from.is(':first-child')) {
+            from.removeClass('active').addClass('next');
+            leftSlide.removeClass('left').addClass('active');
+        }
+    };
     
     return {
-        goToView: goToView
+        goToView: goToView,
+        goToSlide: goToSlide
     };
 }();

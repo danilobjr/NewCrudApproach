@@ -16,7 +16,9 @@
         <script src="js/libs/jsrender.js"></script>
         
         <script src="js/namespace.js"></script>
-        <script src="js/extensions/jquery.extensions.js"></script>
+        <script src="js/ui/crud.screen.js"></script>
+        <script src="js/extensions/crud.javascript.extensions.js"></script>
+        <script src="js/extensions/crud.jquery.extensions.js"></script>
         
         <script src="js/crud.data.js"></script>
         <script src="js/crud.template.js"></script>
@@ -38,8 +40,6 @@
             <header>
                 <h1>CSS3 App</h1>
             </header>
-        
-            <br clear="all" />
         
             <nav id="side_nav">
                 <a class="prev">&lt;</a>
@@ -127,22 +127,26 @@
         </div>
         
         <script id="usersTemplate" type="text/x-jsrender">
-            <div class="user">
-                <figure>
-                    <img src="images/{{:image}}" alt="{{:name}}" />
-                    <figcaption>{{:shortName}}</figcaption>
-                </figure>
+            <div class="slide {{:elementClass}}">
+                {{for users}}
+                    <div class="user">
+                        <figure>
+                            <img src="images/{{:image}}" alt="{{:name}}" />
+                            <figcaption>{{:shortName}}</figcaption>
+                        </figure>
             
-                <hgroup>
-                    <h1>{{:role}}</h1>
-                    <h2>{{:departament}}</h2>
-                </hgroup>
+                        <hgroup>
+                            <h1>{{:role}}</h1>
+                            <h2>{{:departament}}</h2>
+                        </hgroup>
             
-                <span>{{:email}}</span>
+                        <span>{{:email}}</span>
             
-                <div class="profile">
-                    <a href="#">View Profile</a>
-                </div>
+                        <div class="profile">
+                            <a href="#">View Profile</a>
+                        </div>
+                    </div>
+                {{/for}}
             </div>
         </script>
     </body>

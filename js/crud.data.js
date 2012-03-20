@@ -28,6 +28,15 @@ crud.data = {
             image: 'male_5.jpg'
         },
         {
+            id: 4,
+            name: 'Albert Camp',
+            shortName: 'A. Camp',
+            email: 'albertcamp@corp.com',
+            role: 'Director',
+            departament: 'Directory',
+            image: 'male_5.jpg'
+        },
+        {
             id: 5,
             name: 'Albert Camp',
             shortName: 'A. Camp',
@@ -56,6 +65,42 @@ crud.data = {
         },
         {
             id: 8,
+            name: 'Albert Camp',
+            shortName: 'A. Camp',
+            email: 'albertcamp@corp.com',
+            role: 'Director',
+            departament: 'Directory',
+            image: 'male_5.jpg'
+        },
+        {
+            id: 9,
+            name: 'Albert Camp',
+            shortName: 'A. Camp',
+            email: 'albertcamp@corp.com',
+            role: 'Director',
+            departament: 'Directory',
+            image: 'male_5.jpg'
+        },
+        {
+            id: 10,
+            name: 'Albert Camp',
+            shortName: 'A. Camp',
+            email: 'albertcamp@corp.com',
+            role: 'Director',
+            departament: 'Directory',
+            image: 'male_5.jpg'
+        },
+        {
+            id: 11,
+            name: 'Albert Camp',
+            shortName: 'A. Camp',
+            email: 'albertcamp@corp.com',
+            role: 'Director',
+            departament: 'Directory',
+            image: 'male_5.jpg'
+        },
+        {
+            id: 12,
             name: 'Albert Camp',
             shortName: 'A. Camp',
             email: 'albertcamp@corp.com',

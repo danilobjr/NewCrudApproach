@@ -16,19 +16,7 @@ crud.navigator = function () {
         from.removeClass('center');
         to.addClass('center');
     };
-    /*
-    var bindShowSideNav = function (element) {
-        $(element).bind('showSideNav', function () {
-            $('#side_nav').show();
-        });
-    };
-
-    var bindHideSideNav = function (element) {
-        $(element).bind('hideSideNav', function () {
-            $('#side_nav').show();
-        });
-    };
-    */
+    
     return {
         goToView: goToView
     };

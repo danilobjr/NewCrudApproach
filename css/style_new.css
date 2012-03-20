@@ -265,8 +265,8 @@ footer
 
 #side_nav
 {
-    position: absolute;
     display: none;
+    position: absolute;
     width: 100%;
     top: 40%;
     

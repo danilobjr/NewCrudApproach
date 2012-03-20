@@ -9,14 +9,17 @@
         <link rel="stylesheet" type="text/css" href="css/style_new.css" />
         <link rel="stylesheet" type="text/css" href="css/animations.css" />
         <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+        <link href='http://fonts.googleapis.com/css?family=Economica&text=<>' rel='stylesheet' type='text/css'>
         
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js"></script>
-        <script src="https://raw.github.com/BorisMoore/jsrender/master/jsrender.js"></script>
+        <script src="js/libs/jsrender.js"></script>
         
         <script src="js/namespace.js"></script>
-        <script src="js/crud.viewmodel.js"></script>
+        <script src="js/crud.data.js"></script>
         <script src="js/crud.template.js"></script>
+        <script src="js/views/crud.views.users.js"></script>
+        <script src="js/crud.navigator.js"></script>
         <script src="js/crud.app.js"></script>
         
         <!--[if gte IE 9]>
@@ -36,9 +39,14 @@
         
             <br clear="all" />
         
+            <nav id="side_nav">
+                <a class="prev">&lt;</a>
+                <a class="next">&gt;</a>
+            </nav>
+            
             <section id="content">
                 <section id="main_nav" class="up center">
-                    <nav>
+                    <nav id="menu">
                         <div>
                             <div id="user_menu" class="item_menu">
                                 <div class="face front users"><span>Users</span></div>
@@ -101,23 +109,6 @@
                     </header>
             
                     <div class="content">
-                        <!--<div class="user">
-                            <figure>
-                                <img src="images/male_6.jpg" alt="Albert Camp" />
-                                <figcaption>A. Camp</figcaption>
-                            </figure>
-                            
-                            <hgroup>
-                                <h1>Owner</h1>                            
-                                <h2>Operation Directory</h2>
-                            </hgroup>
-                            
-                            <span>albertcamp@corp.com</span>
-                            
-                            <div class="profile">
-                                <a href="#">View Profile</a>
-                            </div>
-                        </div>-->
                     </div>
                 
                     <div class="buttons">
@@ -132,25 +123,25 @@
                 <p>by <a href="http://twitter.com/danilojrr" target="_blank">@danilojrr</a></p>
             </footer>
         </div>
-    </body>
-    
-    <script id="usersTemplate" type="text/x-jsrender">
-        <div class="user">
-            <figure>
-                <img src="images/{{:image}}" alt="{{:name}}" />
-                <figcaption>{{:shortName}}</figcaption>
-            </figure>
+        
+        <script id="usersTemplate" type="text/x-jsrender">
+            <div class="user">
+                <figure>
+                    <img src="images/{{:image}}" alt="{{:name}}" />
+                    <figcaption>{{:shortName}}</figcaption>
+                </figure>
             
-            <hgroup>
-                <h1>{{:role}}</h1>
-                <h2>{{:departament}}</h2>
-            </hgroup>
+                <hgroup>
+                    <h1>{{:role}}</h1>
+                    <h2>{{:departament}}</h2>
+                </hgroup>
             
-            <span>{{:email}}</span>
+                <span>{{:email}}</span>
             
-            <div class="profile">
-                <a href="#">View Profile</a>
+                <div class="profile">
+                    <a href="#">View Profile</a>
+                </div>
             </div>
-        </div>
-    </script>
+        </script>
+    </body>
 </html>

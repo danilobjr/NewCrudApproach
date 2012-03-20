@@ -1,42 +1,36 @@
 crud.app = function () {
 
-    var template = crud.template;
-    var viewmodel = crud.viewmodel;
+    var data = crud.data;
+    var navigator = crud.navigator;
+    var views = crud.views;
 
     var listUsers = function (e) {
-        var href = $(e.currentTarget).attr('href');
-        template.render('#users .content', 'usersTemplate', viewmodel.users);
+        views.users.render(data.users);
     };
     
+    var navigate = function (e) {
+        e.preventDefault();
+        var link = $(e.currentTarget);
+        var from = link.closest('section');
+        var to = $(link.attr('href'));
+
+        navigator.goToView(from, to);
+    };
+
+    var enter = function (e) {
+    };
+
     return {
-        listUsers: listUsers
+        listUsers: listUsers,
+        navigate: navigate
     };
 }();
 
 $(function () {
  
     var app = crud.app;
-    var urlBase = '/NewCrudApproach';
-    //var urlBase = '';
 
-    $('a[href^=#]').click(function (e) {
-        e.preventDefault();
-        var link = $(e.currentTarget);
-
-        var sectionOut = link.closest('section').removeClass('center');
-        
-        var idSectionIn = link.attr('href');
-        var sectionIn = $(idSectionIn).addClass('center');
-    });
-
-    $('.choice').click(function (e) {
-        if ($(e.currentTarget).attr('id').indexOf('com') > -1) {
-            window.location = urlBase + '/new.html';
-        }
-        else {
-            alert('Not yet. =]');
-        }
-    });
-    
+    $('a[href^=#]').click(app.navigate);
+    $('.choice').click(app.enter);
     $('[href=#users]').click(app.listUsers);
 });

@@ -1,1 +1,3 @@
-crud = {};
+crud = {
+    views: {}
+};

@@ -23,11 +23,11 @@ crud.navigator = function () {
 
         if (direction === 'right' && !from.is(':last-child')) {
             from.removeClass('active').addClass('prev');
-            rightSlide.removeClass('right').addClass('active');
+            rightSlide.removeClass('next').addClass('active');
         }
         else if (direction === 'left' && !from.is(':first-child')) {
             from.removeClass('active').addClass('next');
-            leftSlide.removeClass('left').addClass('active');
+            leftSlide.removeClass('prev').addClass('active');
         }
     };
     
